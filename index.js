@@ -7,8 +7,20 @@ let loginInfo = document.querySelector('.loginInfo')
 let parolInfo = document.querySelector('.parolInfo')
 
 login.addEventListener('keyup',()=>{
-    loginInfo.innerHTML = login.value
+    if (loginRegEX.test(login.value)) {
+        loginInfo.innerHTML = login.value + ' :Success'
+    }
+    else{
+        loginInfo.innerHTML = login.value + ' :Failed'
+    }
+
 })
 parol.addEventListener('keyup',()=>{
-    parolInfo.innerHTML = parol.value
+    if (parolRegEX.test(parol.value)) {
+        parolInfo.innerHTML = parol.value + ' :Success'
+    }
+    else{
+        parolInfo.innerHTML = parol.value + ' :Failed'
+    }
+
 })
